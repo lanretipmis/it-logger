@@ -1,0 +1,35 @@
+{
+  "logs": [
+    {
+      "message": "Log 1",
+      "attention": false,
+      "tech": "Jhon Doe",
+      "date": "2020-02-06T17:05:44.100Z",
+      "id": 1
+    },
+    {
+      "message": "Log 2 ",
+      "attention": true,
+      "tech": "Sara Wilson",
+      "date": "2020-02-07T11:18:23.780Z",
+      "id": 2
+    }
+  ],
+  "techs": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe"
+    },
+    {
+      "id": 2,
+      "firstName": "Sam",
+      "lastName": "Smith"
+    },
+    {
+      "id": 3,
+      "firstName": "Sara",
+      "lastName": "Wilson"
+    }
+  ]
+}
