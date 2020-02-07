@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import {addLog} from '../../actions/logActions'
+import { addLog } from "../../actions/logActions";
 import M, {
   textareaAutoResize
 } from "materialize-css/dist/js/materialize.min.js";
+import TechSelectOptions from "../techs/TechSelectOptions";
 
-const AddLogModal = ({addLog}) => {
+const AddLogModal = ({ addLog }) => {
   const [message, setMessage] = useState("");
   const [attention, setAttention] = useState(false);
   const [tech, setTech] = useState("");
@@ -19,11 +20,11 @@ const AddLogModal = ({addLog}) => {
         attention,
         tech,
         date: new Date()
-      }
+      };
 
       addLog(newLog);
 
-      M.toast({html: `Log added by ${tech}`})
+      M.toast({ html: `Log added by ${tech}` });
 
       setMessage("");
       setTech("");
@@ -43,9 +44,6 @@ const AddLogModal = ({addLog}) => {
               value={message}
               onChange={e => setMessage(e.target.value)}
             />
-            <label htmlFor="message" className="active">
-              Log Message
-            </label>
           </div>
         </div>
         <div className="row">
@@ -59,9 +57,7 @@ const AddLogModal = ({addLog}) => {
               <option value="" disabled>
                 Select Tech
               </option>
-              <option value="Jhon Doe">Jhon Doe</option>
-              <option value="Sam Smith">Sam Smith</option>
-              <option value="Sara Wilson">Sara Wilson</option>
+              <TechSelectOptions/>
             </select>
           </div>
         </div>
@@ -100,4 +96,4 @@ const modalStyle = {
   height: "75%"
 };
 
-export default connect(null, {addLog})(AddLogModal);
+export default connect(null, { addLog })(AddLogModal);

@@ -4,8 +4,8 @@
       "id": 1,
       "message": "Fixed it? okay&",
       "attention": false,
-      "tech": "Jhon Doe",
-      "date": "2020-02-07T11:42:36.356Z"
+      "tech": "Andrew Smodlev",
+      "date": "2020-02-07T14:55:53.642Z"
     },
     {
       "message": "Log 2 ",
@@ -13,6 +13,13 @@
       "tech": "Sara Wilson",
       "date": "2020-02-07T11:18:23.780Z",
       "id": 2
+    },
+    {
+      "message": "Heelooo my friends",
+      "attention": false,
+      "tech": "Andrew Smodlev",
+      "date": "2020-02-07T14:56:05.543Z",
+      "id": 3
     }
   ],
   "techs": [
@@ -27,9 +34,9 @@
       "lastName": "Smith"
     },
     {
-      "id": 3,
-      "firstName": "Sara",
-      "lastName": "Wilson"
+      "firstName": "Andrew",
+      "lastName": "Smodlev",
+      "id": 4
     }
   ]
 }

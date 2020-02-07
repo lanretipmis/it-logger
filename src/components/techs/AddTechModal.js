@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import M, {
   textareaAutoResize
 } from "materialize-css/dist/js/materialize.min.js";
+import { connect } from "react-redux";
+import { addTech } from "../../actions/techActions";
 
-const AddTechModal = () => {
+const AddTechModal = ({ addTech }) => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
 
@@ -11,8 +13,9 @@ const AddTechModal = () => {
     if (firstName === "" || lastName === "") {
       M.toast({ html: "Please enter the first and last tech" });
     } else {
-      console.log(firstName, lastName);
+      addTech({ firstName, lastName });
 
+      M.toast({ html: "New tech was added" });
       setFirstName("");
       setLastName("");
     }
@@ -30,9 +33,7 @@ const AddTechModal = () => {
               value={firstName}
               onChange={e => setFirstName(e.target.value)}
             />
-            <label htmlFor="firstName" className="active">
-              First Name
-            </label>
+            
           </div>
         </div>
         <div className="row">
@@ -43,9 +44,7 @@ const AddTechModal = () => {
               value={lastName}
               onChange={e => setLastName(e.target.value)}
             />
-            <label htmlFor="lastName" className="active">
-              Last Name
-            </label>
+            
           </div>
         </div>
         <div className="modal-footer">
@@ -62,4 +61,4 @@ const AddTechModal = () => {
   );
 };
 
-export default AddTechModal;
+export default connect(null, { addTech })(AddTechModal);
