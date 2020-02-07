@@ -54,6 +54,11 @@ export default (state = initialState, action) => {
         logs: action.payload,
         loading: false
       };
+    case SEARCH_LOGS:
+      return{
+        ...state,
+        logs: action.payload
+      }
     case SET_LOADING:
       return {
         ...state,
