@@ -8,7 +8,11 @@ const TechItem = ({ tech, deleteTech }) => {
     <li className="collection-item">
       <div>
         {firstName} {lastName}
-        <a href="#!" className="secondary-content" onClick={()=> deleteTech(id)}>
+        <a
+          href="#!"
+          className="secondary-content"
+          onClick={() => deleteTech(id)}
+        >
           <i className="material-icons grey-text">delete</i>
         </a>
       </div>
